@@ -20,10 +20,16 @@ final class MapViewController: UIViewController {
         return mapView
     }()
 
+    let mapViewModel = MapViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //TODO:- Set Up View Here
+        configureMapView()
+    }
+
+    private func configureMapView() {
         view.addSubview(mapView)
         NSLayoutConstraint.activate([
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

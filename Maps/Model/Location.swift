@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct Location {
-    // TODO: - Data Model Object
+struct Location: Codable {
+    let name: String
+    let lat: String
+    let long: String
 }
